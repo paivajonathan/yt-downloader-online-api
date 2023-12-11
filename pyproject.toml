@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "yt-downloader-online"
+version = "0.1.0"
+description = "The server side from an application to download videos from youtube for free, online"
+authors = ["Jonathan Paiva <jonathanapaiva@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^5.0"
+django-ninja = "^1.1.0"
+psycopg2 = "^2.9.9"
+pytube = "^15.0.0"
+ffmpeg-python = "^0.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
