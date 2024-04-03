@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-vhvze5uowk1j+y=$1n%!aicbtc4o*@7r!em-y+u^w==+y4e+8#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    '*'
+]
 
 # Application definition
 
@@ -47,9 +48,12 @@ CUSTOM_APPS = [
 
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS
 
+CORS_ALLOW_ALL_ORIGINS = True
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -77,19 +81,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'studies',
-        'USER': 'postgres',
-        'PASSWORD': 'docker',
-        'HOST': 'localhost',
-        'PORT': '5433',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'studies',
+    #     'USER': 'postgres',
+    #     'PASSWORD': 'docker',
+    #     'HOST': 'localhost',
+    #     'PORT': '5433',
+    # }
 }
 
 
