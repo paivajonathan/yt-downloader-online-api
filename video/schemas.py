@@ -6,7 +6,7 @@ class VideoSchemaIn(Schema):
 
 
 class VideoSchemaOut(Schema):
-    title: str
+    filename: str
     path: str
 
 

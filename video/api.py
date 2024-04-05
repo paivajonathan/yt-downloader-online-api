@@ -35,7 +35,7 @@ def download(request, payload: VideoSchemaIn):
         )
         
         response = {
-            'title': video.title,
+            'filename': new_filename,
             'path': f'{output_path}{new_filename}',
         }
         return 201, response

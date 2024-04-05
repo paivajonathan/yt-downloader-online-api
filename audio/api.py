@@ -26,7 +26,7 @@ def download(request, payload: AudioIn):
         )
         
         response = {
-            'title': audio.title,
+            'filename': new_filename,
             'path': f'{output_path}{new_filename}',
         }
         return 201, response

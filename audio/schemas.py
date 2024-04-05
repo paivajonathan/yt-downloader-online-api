@@ -6,7 +6,7 @@ class AudioIn(Schema):
 
 
 class AudioOut(Schema):
-    title: str
+    filename: str
     path: str
 
 
